@@ -1,0 +1,8 @@
+2017-02-07 11:16:29,077 INFO daemonizing the supervisord process
+2017-02-07 11:16:29,078 INFO supervisord started with pid 31915
+2017-02-07 11:16:30,083 INFO spawned: 'golang-cron' with pid 31916
+2017-02-07 11:16:40,106 INFO success: golang-cron entered RUNNING state, process has stayed up for > than 10 seconds (startsecs)
+2017-02-07 11:19:23,729 INFO daemonizing the supervisord process
+2017-02-07 11:19:23,731 INFO supervisord started with pid 32192
+2017-02-07 11:19:24,734 INFO spawned: 'golang-cron' with pid 32193
+2017-02-07 11:19:34,772 INFO success: golang-cron entered RUNNING state, process has stayed up for > than 10 seconds (startsecs)
