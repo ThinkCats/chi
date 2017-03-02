@@ -12,7 +12,7 @@ import (
 
 	goquery "github.com/PuerkitoBio/goquery"
 	request "github.com/mozillazg/request"
-	cron "github.com/robfig/cron"
+	"github.com/robfig/cron"
 )
 
 func main() {
@@ -50,7 +50,20 @@ type Food struct {
 	Status int
 }
 
+func robotNotify() {
+	req := request.NewRequest(new(http.Client))
+	req.Json = map[string]string{
+		"msgtype": "text",
+		"text":    `{"content": "新的一天了，加班不要忘记点饭啦"}`,
+		"at":      `{"isAtAll": true}`,
+	}
+	notifyURL := "https://oapi.dingtalk.com/robot/send?access_token=d75ccd07d7c12e1fc6498afdd5e35dd9a7ec0ca46b59a657dbac2064395c5b6f"
+	req.Post(notifyURL)
+}
+
 func saveOrder() {
+	//机器人提醒
+	robotNotify()
 
 	//login
 	req := request.NewRequest(new(http.Client))
